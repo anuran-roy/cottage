@@ -1,0 +1,44 @@
+Pass 1, Step 1: Requirement analysis
+> Query: Analyze the current question, and tell me the requirements of the type of information. Generate a structured XML for the information required by creating tags using the vocabulary provided to you. 
+        
+        The vocabulary that you know for generating XML is:
+        ```
+        {'<COTTAGE_TRANSIENT': "Temporary data that needs to lookup for evolving data. Associated with words like 'current', 'last', 'previous', or other relative phrases that change over time. Example: The current President of the United States is Joe Biden, the previous president was Donald Trump", '<COTTAGE_NON_TRANSIENT': 'Data that does not change over time. For example: India got independence in 15th August, 1947'}
+        ```
+
+        The user query is:
+        ```
+        Who is the current president of India?
+        ```
+        /n
+> Result: Based on the user query "Who is the current president of India?", the information required pertains to current and evolving data related to the President of India.
+
+Here is the structured XML representation of the information required:
+
+```xml
+<COTTAGE_TRANSIENT>
+    <currentPresident>
+        India
+    </currentPresident>
+</COTTAGE_TRANSIENT>
+```
+
+In the generated XML:
+- `<COTTAGE_TRANSIENT>` tag indicates that the information relates to temporary data that changes over time.
+- `<currentPresident>` tag identifies that the query is about the current president.
+- The country "India" is provided as the response to the user query.
+> Query: 
+            The question given by the user is:
+            ```
+            Who is the current president of India?
+            ```.
+
+            The data given is: 
+            ```
+            [('COTTAGE_TRANSIENT', [{'title': 'India - The World Factbook', 'url': 'https://www.cia.gov/the-world-factbook/countries/india/', 'content': 'India is a source, transit, and destination for illicit narcotics and precursor chemicals; drug abuse in India growing, facilitated by illicit narcotics and the availability of over-the-counter medicines; commonly abused substances in India include heroin, cannabis, and cocaine, with growing use of pharmaceutical drugs in recent years including ...', 'score': 0.9899087, 'raw_content': None}, {'title': 'India | History, Map, Population, Economy, & Facts | Britannica', 'url': 'https://www.britannica.com/place/India', 'content': 'The expansive alluvial plains of the Indus and Ganges (Ganga) river basins in India provided the environment and focus for the rise of two great phases of city life: the civilization of the Indus valley, known as the Indus civilization, during the 3rd millennium BCE; and, during the 1st millennium BCE, that of the Ganges.\n Only after the arrival of the Portuguese navigator Vasco da Gama in 1498 and the subsequent establishment of European maritime supremacy in the region did India become exposed to major external influences arriving by sea, a process that culminated in the decline of the ruling Muslim elite and absorption of the subcontinent within the British Empire.\n Much of India’s territory lies within a large peninsula, surrounded by the Arabian Sea to the west and the Bay of Bengal to the east; Cape Comorin, the southernmost point of the Indian mainland, marks the dividing line between those two bodies of water. Contemporary India’s increasing physical prosperity and cultural dynamism—despite continued domestic challenges and economic inequality—are seen in its well-developed infrastructure and a highly diversified industrial base, in its pool of scientific and engineering personnel (one of the largest in the world), in the pace of its agricultural expansion, and in its rich and vibrant cultural exports of music, literature, and cinema. The most popular religious festivals celebrated over the greater part of India are Vasantpanchami, in honour of Sarasvati, the goddess of learning; Holi, a time when traditional hierarchical relationships are forgotten and celebrants throw coloured water and powder at one another; Dussehra, when the story of the\xa0Ramayana\xa0is reenacted, and Diwali (Divali), a time for lighting lamps and exchanging gifts.\n', 'score': 0.9811669, 'raw_content': None}, {'title': 'India - Simple English Wikipedia, the free encyclopedia', 'url': 'https://simple.wikipedia.org/wiki/India', 'content': 'India\'s government is divided into three parts: the Legislative (the one that makes the laws, the Parliament), the Executive (the government), and the Judiciary (the one that makes sure that the laws are obeyed, the supreme court).\n Its constitution lists the name of the country in each of the languages.[57] Hindi and English (listed in boldface) are the "official languages of the union" (Union meaning the Federal Government in Delhi);[58] Tamil, Sanskrit, Telugu, Kannada, Malayalam, and Odia are officially the "classical languages of India. During the Epic and Puranic periods, the earliest versions of the epic poems Ramayana and Mahabharata were written from about 500–100 BCE,[61] although these were orally transmitted for centuries before this period.[62] Other South Asian Stone Age sites apart from Pakistan are in modern India, such as the Bhimbetka rock shelters in central Madhya Pradesh and the Kupgal petroglyphs of eastern Karnataka, contain rock art showing religious rites and evidence of possible ritualised music.[63]\nSeveral modern religions are linked to India,[64] namely modern Hinduism, Jainism, Buddhism and Sikhism. It is one of the few countries that have nuclear bombs.[26] Since 1991, India has been one of the fastest-growing economies in the world.[27]\nGovernment[change | change source]\nIndia has the most people of any democracy in the world.[28] In the west is the Arabian Sea, in the south is the Indian Ocean, and in the east is the Bay of Bengal.', 'score': 0.9731898, 'raw_content': None}, {'title': 'India Factsheet - The World Factbook', 'url': 'https://www.cia.gov/the-world-factbook/countries/india/factsheets/', 'content': 'India Country Factsheet. PDF. Introduction. Background. The Indus Valley civilization, one of the world\'s oldest, flourished during the 3rd and 2nd millennia B.C. and extended into northwestern India. By the 19th century, Great Britain had become the dominant political power on the subcontinent, and India was seen as the "Jewel in the Crown" of ...', 'score': 0.97140163, 'raw_content': None}, {'title': 'India - Ancient, Mughal, British | Britannica', 'url': 'https://www.britannica.com/place/India/History', 'content': 'This section will discuss five major periods: (1) the early prehistoric period (before the 8th millennium bce), (2) the period of the prehistoric agriculturalists and pastoralists (approximately the 8th to the mid-4th millennium bce), (3) the Early Indus, or Early Harappan, Period (so named for the excavated city of Harappa in eastern Pakistan), witnessing the emergence of the first cities in the Indus River system (c. 3500–2600 bce), (4) the Indus, or Harappan, civilization (c. 2600–2000 bce, or perhaps ending as late as 1750 bce), and (5) the Post-Urban Period, which follows the Indus civilization and precedes the rise of cities in northern India during the second quarter of the 1st millennium bce (c. 1750–750 bce).\n Within the framework of hills and mountains represented by the Indo-Iranian borderlands on the west, the Indo-Myanmar borderlands in the east, and the Himalayas to the north, the subcontinent may in broadest terms be divided into two major divisions: in the north, the basins of the Indus and Ganges (Ganga) rivers (the Indo-Gangetic Plain) and, to the south, the block of Archean rocks that forms the Deccan plateau region. The Indus valley may be divided into three parts: in the north are the plains of the five tributary rivers of the Punjab (Persian: Panjāb, “Five Waters”); in the centre the consolidated waters of the Indus and its tributaries flow through the alluvial plains of Sind; and in the south the waters pass naturally into the Indus delta. The Ganges valley divides into three major parts: to the west is the Ganges-Yamuna Doab (the land area that is formed by the confluence of the two rivers); east of the confluence lies the middle Ganges valley, in which population tends to increase and cultivation of rice predominates; and to the southeast lies the extensive delta of the combined Ganges and Brahmaputra rivers. The expansive alluvial plain of the river basins provided the environment and focus for the rise of two great phases of city life: the civilization of the Indus valley, known as the Indus civilization, during the 3rd millennium bce; and, during the 1st millennium bce, that of the Ganges.', 'score': 0.9492946, 'raw_content': None}])]
+            ```
+
+            Please answer the question.
+            /n
+> Result: The current president of India is Ram Nath Kovind.
+The current president of India is Ram Nath Kovind.
